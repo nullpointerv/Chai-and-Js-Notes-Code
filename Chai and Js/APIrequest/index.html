@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="border-color: rgb(33, 31, 31);">
+ <button id="clicked">CLICK HERE</button> 
+<div class="card">
+
+</div>
+</body>
+<script>
+
+const requestUrl='https://api.github.com/users/hiteshchoudhary'
+const xhr = new XMLHttpRequest();
+xhr.open('GET',requestUrl)
+xhr.onreadystatechange=function(){
+    console.log(xhr.readyState);
+    if(xhr.readyState===4){
+        const data =JSON.parse(this.responseText)
+        console.log(typeof data);
+        console.log(data.followers);
+         
+    }
+}
+xhr.send();
+
+const afterClick =function(){
+document.getElementsByClassName('card');
+document.write
+
+}
+document.getElementById('clicked').addEventListener('click',afterClick)
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASYNC</title>
+</head>
+<body>
+   <h1>KHUSHI AND JAVASCRIPT</h1> 
+   <button id="start">start</button>
+   <button id="stop">stop</button>
+</body>
+<script>
+let stopped;
+const shuru=function(){
+    let click =function (){
+    console.log("start clicked");
+}
+    stopped =setInterval(click,1000);
+
+}
+const khatam=function(){
+    let stopclicked =function (){
+    console.log("stop clicked");
+
+} 
+clearInterval(stopped);
+stopped = null;  
+
+
+}
+document.getElementById('start').addEventListener('click',shuru);
+document.getElementById('stop').addEventListener('click',khatam);
+
+</script>
+</html>

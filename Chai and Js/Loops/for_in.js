@@ -1,0 +1,1 @@
+//For-in generally used in objects
